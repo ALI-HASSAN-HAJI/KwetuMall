@@ -11,16 +11,21 @@ const userSchema = new Schema({
   },
   email: {
     type: String,
-    required: [true, 'Email must be provided'] 
-  },
-  password: {
-    type: String,
-    required: [true, 'Password cannot be blank']
+    required: [true, 'Email must be provided'],
+    unique: true
   },
   gender: {
     type: String,
     required: [true, 'Gender must be specified']
-  }
+  },
+  dateOfBirth: {
+    type: Date,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
 });
 
-export default model("userModel", userSchema);
+export default model("userModel", userSchema); 

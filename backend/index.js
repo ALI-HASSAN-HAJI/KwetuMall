@@ -26,7 +26,7 @@ app.use('/', classRouter);
 app.use('/', exampleRouter);
 app.use('/', calculatorRoutes);
 app.use('/student', studentRoutes);
-app.use('/users', userAuth);
+app.use('/', userAuth);
 app.use('/player', playerRoutes);
 
 app.listen(PORT, () => {
